@@ -23,7 +23,7 @@ export default class App extends Component {
   const contactsCheck = this.state.contacts.some(
     ({ name }) => name === newContact.name,
   );
-  if (!contactsCheck ) {
+  if (contactsCheck ) {
     alert(`${newContact.name}is already in contacts book`);
     return;
   }
